@@ -1,0 +1,154 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: #000000;
+}
+
+.hedar{
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Added for responsiveness */
+}
+
+.link{
+  margin: 1.5%;
+}
+.name{
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.744);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .name {
+    font-size: 24px;
+  }
+  .logo {
+    padding: 1px;
+  }
+  .text-anim h2 {
+    font-size: 24px;
+  }
+  .sec-text li {
+    font-size: 24px;
+  }
+  img {
+    width: 150px;
+  }
+}
+
+/* Rest of your CSS code... */
+.logo{
+  padding: 2px;
+  transition: 0.5s linear;
+  user-select: none;
+  text-shadow: -1px -1px  rgb(75, 155, 104);
+  box-shadow: -1px -1px 2px  rgb(0, 255, 255);
+}
+.logo:hover{
+  
+  border-radius: 12%;
+  cursor: pointer;
+  transition: all 0.7s ease-in-out;
+  box-shadow: -1.5px -1.5px 1.5px 1.5px rgb(255, 42, 0);
+
+}
+a{
+box-shadow: 0 -2px 2px rgb(0, 247, 255);
+  padding: 10px;
+  text-decoration: none;
+  color: rgb(188, 188, 188);
+  transition: all 0.6s ease-in-out;
+}
+a:first-child{
+  box-shadow: -2px -2px -2px rgb(0, 247, 255);
+}
+a:last-child{
+  box-shadow: 0px -2px 2px rgb(0, 247, 255);
+}
+a:hover{
+  border-radius: 10%;
+  box-shadow: -2px -2px rgb(255, 68, 0);
+  transition: all 0.5s ease-in-out;
+  
+}
+a::after{
+  background-color: rgb(255, 0, 0);
+  transition: all 0.5s ease-in-out;
+}
+.prof{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-weight: 400;
+}
+.first-text{
+  margin-left: 10px;
+}
+
+.text-anim{
+  display: flex;
+}
+.text-anim h2{
+  color: aliceblue;
+  font-size: 30px;
+  font-weight: 400;
+}
+.text-anim .sec-text{
+  height: 30px;
+  line-height: 40px;
+  overflow: hidden;
+}
+.sec-text li{
+  position: relative;
+  top: 0;
+  font-size: 30px;
+  color: #0ef;
+  list-style: none;
+  padding: 0 20px;
+  animation: slids 12s steps(4) infinite,colorful 6s infinite  ;
+  
+}
+
+@keyframes slids{
+  100%{
+    top:-160px;
+  }
+}
+@keyframes colorful{
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+img{
+  width: 200px;
+  border-radius: 40%;
+}
+.sec-text li span{
+  position: relative;
+}
+.sec-text li span::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 400px;
+  height: 40px;
+  background: rgb(0, 0, 0);
+  border-left: 2px solid #0ef;
+  animation: typing 1.5s steps(10) infinite alternate;
+
+
+}@keyframes typing{
+  100%{
+    left: 115%;
+    margin: 0 -35 0 35;
+  }
+}
+
+
+
